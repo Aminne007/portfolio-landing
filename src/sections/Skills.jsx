@@ -7,8 +7,8 @@ export default function Skills() {
       <SectionHeading
         id="skills-title"
         eyebrow="Capabilities"
-        title="Where I bring the most value"
-        description="A blend of technical execution, systems thinking, and collaborative leadership."
+        title="Technical domains & ongoing growth"
+        description="Core engineering stacks, supporting tools, and the programs that keep me learning."
       />
       <div className="skills-grid">
         <div className="skills-categories">
@@ -23,15 +23,16 @@ export default function Skills() {
             </article>
           ))}
         </div>
-        <div className="skills-testimonials">
-          {skills.testimonials.map((testimonial) => (
-            <blockquote key={testimonial.name}>
-              <p>{testimonial.quote}</p>
-              <footer>
-                <span className="testimonial-name">{testimonial.name}</span>
-                <span className="testimonial-role">{testimonial.role}</span>
-              </footer>
-            </blockquote>
+        <div className="skills-callouts">
+          {skills.callouts.map((callout) => (
+            <article key={callout.title} className="callout-card">
+              <h3>{callout.title}</h3>
+              <ul>
+                {callout.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
           ))}
         </div>
       </div>

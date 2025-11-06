@@ -8,8 +8,8 @@ export default function Projects() {
       <SectionHeading
         id="projects-title"
         eyebrow="Projects"
-        title="Selected work that pairs strategy with craft"
-        description="Curated engagements that showcase end-to-end thinking, measurable outcomes, and attention to detail."
+        title="Data-driven engineering initiatives"
+        description="A snapshot of robotics, IoT, and software projects that combine disciplined delivery with measurable outcomes."
       />
       <div className="projects-grid">
         {projects.map((project) => (
