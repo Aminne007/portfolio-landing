@@ -1,10 +1,16 @@
+import image1 from '../../assets/image 1.png';
+import image2 from '../../assets/image2.png';
+import image3 from '../../assets/image 3.png';
+
+
+
 export const profile = {
   name: 'Amine Hassan Al Maassarani',
   location: 'Tripoli, Lebanon',
   headline:
-    'Computer & Communication Engineer focused on embedded systems, intelligent networking, and secure mobile experiences',
-  availability: 'Available for embedded, mobile, and IoT-focused roles',
-  focusArea: 'Robotics, IoT & secure network automation',
+    'Computer & Communication Engineer focused on embedded systems, intelligent networking, and secure mobile,Web experiences',
+  availability: 'Available for embedded, mobile,Web, and IoT-focused roles',
+  focusArea: 'Robotics, IoT & secure network solutions',
   responseTime: 'Replies within 24 hours via email',
   heroCTA: {
     primaryLabel: 'Email Amine',
@@ -25,8 +31,13 @@ export const about = {
   highlights: [
     { label: 'Degree', value: 'BCCE, Lebanese International University' },
     { label: 'Graduation', value: 'Class of 2025 · Distinction' },
-    { label: 'Capstone', value: 'Rescue Rover – Hybrid autonomous rover' },
+    { label: 'Capstone', value: 'Rescue Rover – Hybrid  rover' },
+    { label: 'Studying', value: 'MCCE, Lebanese International University' },
+    { label: 'Graduation', value: 'In proggress' },
   ],
+
+
+
   services: [
     {
       title: 'Embedded & IoT Systems',
@@ -43,25 +54,46 @@ export const about = {
       description:
         'Design Flutter and Android applications backed by Firebase services, real-time analytics, and polished Material 3 user experiences.',
     },
+    {
+    title: 'Web Dev',
+    description:
+      'Design Websites using diffrent languages and frame works like HTML, CSS, JavaScript, PHP , React , tailwind , and more.',
+  },
   ],
 };
 
 export const projects = [
   {
-    title: 'Rescue Rover – Hybrid Autonomous Exploration Platform',
+    title: 'Rescue Rover – Hybrid Exploration Platform',
     description:
       'Architected an ESP32-powered rover with GPS, live camera streaming, WebSocket telemetry, and obstacle detection to support rapid response scenarios.',
+    stats: [
+      { label: 'Role', value: ' Developper ,Systems Engineer' },
+      { label: 'Timeline', value: '2024 — 2025' },
+      { label: 'Impact', value: 'Real-time navigation & data capture' },
+    ],
+    technologies: ['ESP32', 'Flutter', 'WebSockets', 'GPS', 'Sensor Fusion'],
+    cta: {
+      label: 'Request Technical Brief',
+      href: 'mailto:aminemaaasarani@gmail.com?subject=Rescue%20Rover%20Brief',
+    },
+    image: image1,image2,image3,
+  },
+  {
+    title: 'Rescue Rover – Flutter/Dart App',
+    description:
+      'Rescue Rover app for controlling and monitoring the hybrid exploration platform, featuring real-time telemetry, camera streaming, and intuitive navigation controls and offline Maps.',
     stats: [
       { label: 'Role', value: 'Team Lead & Systems Engineer' },
       { label: 'Timeline', value: '2024 — 2025' },
       { label: 'Impact', value: 'Real-time navigation & data capture' },
     ],
-    technologies: ['ESP32', 'Flutter', 'Firebase', 'WebSockets', 'GPS', 'Sensor Fusion'],
+    technologies: ['ESP32', 'Flutter', 'WebSockets', 'GPS', 'Sensor Fusion'],
     cta: {
       label: 'Request Technical Brief',
       href: 'mailto:aminemaaasarani@gmail.com?subject=Rescue%20Rover%20Brief',
     },
-    image: '',
+    image: image1,image2,image3,
   },
   {
     title: 'Gym Rat – Cross-Platform Gym Management & E-Commerce App',
@@ -83,9 +115,9 @@ export const projects = [
     stats: [
       { label: 'Role', value: 'Software Developer' },
       { label: 'Timeline', value: '2023' },
-      { label: 'Outcome', value: 'Automated end-to-end ticketing' },
+      { label: 'Outcome', value: 'end-to-end ticketing' },
     ],
-    technologies: ['Java', 'Swing', 'PHP', 'MySQL'],
+    technologies: ['Java', 'PHP', 'MySQL'],
     cta: { label: 'Review Implementation Notes', href: '#contact' },
     image: '',
   },
@@ -131,11 +163,20 @@ export const skills = {
   categories: [
     {
       title: 'Programming & Scripting',
-      items: ['C', 'C++', 'Java', 'PHP', 'Dart'],
+      items: ['C', 'C++', 'Java', 'PHP', 'Dart', 'JavaScript', 'TypeScript', 'Python'],
     },
     {
       title: 'Platforms & Frameworks',
-      items: ['Flutter', 'Android Studio', 'Firebase (Auth, Firestore, Storage, Functions)', 'MySQL', 'ESP32 & Arduino Ecosystem'],
+      items: [
+        'React',
+        'Vite',
+        'Tailwind CSS',
+        'Flutter',
+        'Android Studio',
+        'Firebase (Auth, Firestore, Storage, Functions)',
+        'MySQL',
+        'ESP32 & Arduino Ecosystem',
+      ],
     },
     {
       title: 'Networks & Security',
