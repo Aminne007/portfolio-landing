@@ -1,5 +1,6 @@
 import SectionHeading from '../components/SectionHeading.jsx';
 import Button from '../components/Button.jsx';
+import ProjectCarousel from '../components/ProjectCarousel.jsx';
 import { projects } from '../data/portfolioData.js';
 
 export default function Projects() {
@@ -8,19 +9,17 @@ export default function Projects() {
       <SectionHeading
         id="projects-title"
         eyebrow="Projects"
-        title="Selected work that pairs strategy with craft"
-        description="Curated engagements that showcase end-to-end thinking, measurable outcomes, and attention to detail."
+        title="Data-driven engineering initiatives"
+        description="A snapshot of robotics, IoT, and software projects that combine disciplined delivery with measurable outcomes."
       />
       <div className="projects-grid">
         {projects.map((project) => (
           <article key={project.title} className="project-card">
-            <div className="project-media" aria-hidden="true">
-              {project.image ? (
-                <img src={project.image} alt="" />
-              ) : (
-                <div className="project-placeholder">Add project visual</div>
-              )}
-            </div>
+            <ProjectCarousel
+              title={project.title}
+              images={project.images ?? (project.image ? [project.image] : [])}
+              placeholder="Add project visual"
+            />
             <div className="project-content">
               <h3>{project.title}</h3>
               <p>{project.description}</p>

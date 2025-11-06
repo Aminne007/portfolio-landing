@@ -7,7 +7,7 @@ export default function About() {
       <SectionHeading
         id="about-title"
         eyebrow="About"
-        title="Crafting resilient products with precision and empathy"
+        title={about.title}
         description={about.summary}
       />
       <div className="about-grid">

@@ -7,8 +7,8 @@ export default function Experience() {
       <SectionHeading
         id="experience-title"
         eyebrow="Experience"
-        title="Trusted to own complex initiatives end-to-end"
-        description="A snapshot of roles where I shipped high-impact work, led teams, and elevated product quality."
+        title="Experience & applied training"
+        description="Roles and programs that strengthened my ability to design resilient infrastructure and deliver connected products."
       />
       <div className="experience-timeline">
         {experience.map((item) => (
