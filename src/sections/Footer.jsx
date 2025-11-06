@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <p>&copy; {currentYear} {profile.name}. All rights reserved.</p>
-        <p className="footer-note">Designed and built with care. Update this note with your personal signature.</p>
+        <p className="footer-note">Portfolio curated to spotlight robotics, IoT, and secure network engineering initiatives delivered from {profile.location}.</p>
       </div>
     </footer>
   );

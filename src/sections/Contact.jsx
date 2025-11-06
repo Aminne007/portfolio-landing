@@ -8,7 +8,7 @@ export default function Contact() {
       <SectionHeading
         id="contact-title"
         eyebrow="Contact"
-        title="Let’s build what’s next"
+        title="Start a collaboration or request documentation"
         description={contact.availabilityMessage}
       />
       <div className="contact-grid">

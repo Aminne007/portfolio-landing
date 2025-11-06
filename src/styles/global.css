@@ -615,13 +615,12 @@ main {
   color: var(--color-muted);
 }
 
-.skills-testimonials {
+.skills-callouts {
   display: grid;
   gap: 1.25rem;
 }
 
-.skills-testimonials blockquote {
-  margin: 0;
+.callout-card {
   background: var(--color-surface-alt);
   border-radius: 1.5rem;
   padding: 1.75rem;
@@ -629,21 +628,34 @@ main {
   box-shadow: var(--shadow-soft);
 }
 
-.skills-testimonials p {
-  margin: 0 0 1rem;
-  color: var(--color-text);
-  font-size: 1.05rem;
-  font-weight: 500;
+.callout-card h3 {
+  margin: 0 0 0.75rem;
 }
 
-.testimonial-name {
-  display: block;
-  font-weight: 600;
-}
-
-.testimonial-role {
+.callout-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.6rem;
   color: var(--color-muted);
-  font-size: 0.9rem;
+}
+
+.callout-card li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.callout-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(91, 228, 168, 0.2);
 }
 
 .contact-grid {
