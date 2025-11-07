@@ -39,13 +39,21 @@ export default function Projects() {
                     <li key={tech}>{tech}</li>
                   ))}
                 </ul>
+                <div className="project-meta">
+                  <span className="meta-label">Stack</span>
+                  <ul className="project-tags">
+                    {project.technologies.map((tech) => (
+                      <li key={tech}>{tech}</li>
+                    ))}
+                  </ul>
+                </div>
+                <Button href={project.cta.href} variant="ghost" className="project-link">
+                  {project.cta.label}
+                </Button>
               </div>
-              <Button href={project.cta.href} variant="ghost" className="project-link">
-                {project.cta.label}
-              </Button>
-            </div>
-          </article>
-        ))}
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

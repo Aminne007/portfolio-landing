@@ -20,40 +20,20 @@ export default function Contact() {
                 <a href={`mailto:${contact.email}`}>{contact.email}</a>
               </dd>
             </div>
-            <div>
-              <dt>Phone</dt>
-              <dd>
-                <a href={`tel:${contact.phone}`}>{contact.phone}</a>
-              </dd>
+            <div className="form-row">
+              <label htmlFor="message">Project details</label>
+              <textarea id="message" name="message" rows="5" placeholder="Share a quick overview"></textarea>
             </div>
-            <div>
-              <dt>Location</dt>
-              <dd>{contact.location}</dd>
+            <div className="form-actions">
+              <Button href={null} type="submit" onClick={(event) => event.preventDefault()}>
+                Send inquiry
+              </Button>
+              <Button href={contact.calendlyHref} variant="secondary">
+                Book a call
+              </Button>
             </div>
-          </dl>
+          </form>
         </div>
-        <form className="contact-form" aria-label="Contact form">
-          <div className="form-row">
-            <label htmlFor="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Enter your name" autoComplete="name" />
-          </div>
-          <div className="form-row">
-            <label htmlFor="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="Enter your email" autoComplete="email" />
-          </div>
-          <div className="form-row">
-            <label htmlFor="message">Project details</label>
-            <textarea id="message" name="message" rows="5" placeholder="Share a quick overview"></textarea>
-          </div>
-          <div className="form-actions">
-            <Button href={null} type="submit" onClick={(event) => event.preventDefault()}>
-              Send inquiry
-            </Button>
-            <Button href={contact.calendlyHref} variant="secondary">
-              Book a call
-            </Button>
-          </div>
-        </form>
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 import Button from '../components/Button.jsx';
 import Icon from '../components/Icon.jsx';
 import useTypewriter from '../hooks/useTypewriter.js';
-import { profile } from '../data/portfolioData.js';
+import { profile, about } from '../data/portfolioData.js';
 
 export default function Hero() {
   const typedHeadline = useTypewriter(profile.headline, 50);
