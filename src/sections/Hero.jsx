@@ -5,6 +5,11 @@ import { profile } from '../data/portfolioData.js';
 
 export default function Hero() {
   const typedHeadline = useTypewriter(profile.headline, 50);
+  const heroHighlights = [
+    { label: 'Based in', value: profile.location },
+    { label: 'Focus areas', value: profile.focusArea },
+    { label: 'Response time', value: profile.responseTime },
+  ];
 
   return (
     <section id="hero" className="hero">
@@ -35,14 +40,12 @@ export default function Hero() {
         </ul>
       </div>
       <div className="hero-highlight">
-        <div className="hero-highlight-card">
-          <span className="highlight-label">Based in</span>
-          <span className="highlight-value">{profile.location}</span>
-        </div>
-        <div className="hero-highlight-card">
-          <span className="highlight-label">Currently focused on</span>
-          <span className="highlight-value">AI-driven product innovation</span>
-        </div>
+        {heroHighlights.map((item) => (
+          <div key={item.label} className="hero-highlight-card">
+            <span className="highlight-label">{item.label}</span>
+            <span className="highlight-value">{item.value}</span>
+          </div>
+        ))}
       </div>
     </section>
   );
