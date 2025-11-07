@@ -91,7 +91,7 @@ export default function App() {
         Skip to content
       </a>
       <SiteHeader currentPath={currentPath} navLinks={navLinks} />
-      <main id="content" ref={contentRef} tabIndex="-1" className="site-main">
+      <main id="content" ref={contentRef} tabIndex="-1">
         <CurrentScreen />
       </main>
       <Footer />

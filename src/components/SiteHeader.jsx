@@ -4,45 +4,9 @@ import Icon from './Icon.jsx';
 import { profile } from '../data/portfolioData.js';
 
 export default function SiteHeader({ currentPath, navLinks = [] }) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [currentPath]);
-
-  useEffect(() => {
-    if (typeof window === 'undefined') {
-      return undefined;
-    }
-
-    const handleKeyDown = (event) => {
-      if (event.key === 'Escape') {
-        setIsMenuOpen(false);
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  useEffect(() => {
-    if (typeof window === 'undefined') {
-      return undefined;
-    }
-
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsMenuOpen(false);
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
-    <header className={`site-header${isMenuOpen ? ' is-open' : ''}`}>
-      <div className="shell header-shell">
+    <header className="site-header">
+      <div className="container">
         <a className="brand" href="#/">
           <span className="brand-mark" aria-hidden="true" />
           <span className="brand-copy">

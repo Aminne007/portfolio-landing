@@ -1,3 +1,9 @@
+import image1 from '../../assets/image 1.png';
+import image2 from '../../assets/image2.png';
+import image3 from '../../assets/image 3.png';
+
+
+
 export const profile = {
   name: 'Amine Hassan Al Maassarani',
   location: 'Tripoli, Lebanon',
@@ -10,7 +16,7 @@ export const profile = {
     primaryLabel: 'Email Amine',
     primaryHref: 'mailto:aminemaaasarani@gmail.com',
     secondaryLabel: 'View Portfolio Highlights',
-    secondaryHref: '#/projects',
+    secondaryHref: '#projects',
   },
   socialLinks: [
     { label: 'Email', href: 'mailto:aminemaaasarani@gmail.com', icon: 'mail' },
@@ -25,8 +31,13 @@ export const about = {
   highlights: [
     { label: 'Degree', value: 'BCCE, Lebanese International University' },
     { label: 'Graduation', value: 'Class of 2025 · Distinction' },
-    { label: 'Capstone', value: 'Rescue Rover – Hybrid autonomous rover' },
+    { label: 'Capstone', value: 'Rescue Rover – Hybrid  rover' },
+    { label: 'Studying', value: 'MCCE, Lebanese International University' },
+    { label: 'Graduation', value: 'In proggress' },
   ],
+
+
+
   services: [
     {
       title: 'Embedded & IoT Systems',
@@ -43,6 +54,11 @@ export const about = {
       description:
         'Design Flutter and Android applications backed by Firebase services, real-time analytics, and polished Material 3 user experiences.',
     },
+    {
+    title: 'Web Dev',
+    description:
+      'Design Websites using diffrent languages and frame works like HTML, CSS, JavaScript, PHP , React , tailwind , and more.',
+  },
   ],
 };
 
@@ -77,7 +93,7 @@ export const projects = [
       { label: 'Highlight', value: 'Realtime catalog & analytics' },
     ],
     technologies: ['Flutter', 'Dart', 'Firebase Auth', 'Cloud Firestore', 'Cloud Functions'],
-    cta: { label: 'Preview Feature Roadmap', href: '#/contact' },
+    cta: { label: 'Preview Feature Roadmap', href: '#contact' },
     images: [
       'https://placehold.co/900x520/111827/5be4a8?text=Gym+Rat+Dashboard',
       'https://placehold.co/900x520/111827/5be4a8?text=Gym+Rat+Mobile+Storefront',
@@ -93,7 +109,7 @@ export const projects = [
       { label: 'Outcome', value: 'Automated end-to-end ticketing' },
     ],
     technologies: ['Java', 'Swing', 'PHP', 'MySQL'],
-    cta: { label: 'Review Implementation Notes', href: '#/contact' },
+    cta: { label: 'Review Implementation Notes', href: '#contact' },
     images: [
       'https://placehold.co/900x520/0f111c/5be4a8?text=Cinema+Ticketing+Workflow',
       'https://placehold.co/900x520/0f111c/5be4a8?text=Database+Integration',

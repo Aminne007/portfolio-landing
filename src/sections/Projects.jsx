@@ -3,35 +3,40 @@ import Button from '../components/Button.jsx';
 import ProjectCarousel from '../components/ProjectCarousel.jsx';
 import { projects } from '../data/portfolioData.js';
 
+
 export default function Projects() {
   return (
-    <section id="projects" className="section projects-section" aria-labelledby="projects-title">
-      <div className="shell section-shell">
-        <SectionHeading
-          id="projects-title"
-          eyebrow="Projects"
-          title="Data-driven engineering initiatives"
-          description="A snapshot of robotics, IoT, and software projects that combine disciplined delivery with measurable outcomes."
-        />
-        <div className="projects-grid">
-          {projects.map((project) => (
-            <article key={project.title} className="project-card">
-              <ProjectCarousel
-                title={project.title}
-                images={project.images ?? (project.image ? [project.image] : [])}
-                placeholder="Add project visual"
-              />
-              <div className="project-content">
-                <header className="project-header">
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                </header>
-                <ul className="project-stats" aria-label={`${project.title} quick facts`}>
-                  {project.stats.map((stat) => (
-                    <li key={stat.label}>
-                      <span className="stat-label">{stat.label}</span>
-                      <span className="stat-value">{stat.value}</span>
-                    </li>
+    <section id="projects" className="section projects" aria-labelledby="projects-title">
+      <SectionHeading
+        id="projects-title"
+        eyebrow="Projects"
+        title="Data-driven engineering initiatives"
+        description="A snapshot of robotics, IoT, and software projects that combine disciplined delivery with measurable outcomes."
+      />
+      <div className="projects-grid">
+        {projects.map((project) => (
+          <article key={project.title} className="project-card">
+            <ProjectCarousel
+              title={project.title}
+              images={project.images ?? (project.image ? [project.image] : [])}
+              placeholder="Add project visual"
+            />
+            <div className="project-content">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <ul className="project-stats" aria-label={`${project.title} quick facts`}>
+                {project.stats.map((stat) => (
+                  <li key={stat.label}>
+                    <span className="stat-label">{stat.label}</span>
+                    <span className="stat-value">{stat.value}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="project-meta">
+                <span className="meta-label">Stack</span>
+                <ul className="project-tags">
+                  {project.technologies.map((tech) => (
+                    <li key={tech}>{tech}</li>
                   ))}
                 </ul>
                 <div className="project-meta">
