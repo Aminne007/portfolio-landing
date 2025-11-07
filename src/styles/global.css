@@ -928,24 +928,6 @@ main {
     padding: 3.25rem 0;
   }
 
-  .about-stats,
-  .about-services,
-  .projects-grid,
-  .experience-timeline,
-  .skills-categories,
-  .skills-callouts,
-  .contact-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .projects-grid {
-    gap: 1.5rem;
-  }
-
-  .footer-nav {
-    justify-content: center;
-  }
-
   .hero {
     padding: 2.15rem;
     gap: 1.75rem;
@@ -994,10 +976,6 @@ main {
   .hero {
     padding: 1.75rem;
     border-radius: 1.5rem;
-  }
-
-  .projects-grid {
-    gap: 1.25rem;
   }
 
   .hero h1 {

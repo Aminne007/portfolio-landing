@@ -3,6 +3,7 @@ import Button from '../components/Button.jsx';
 import ProjectCarousel from '../components/ProjectCarousel.jsx';
 import { projects } from '../data/portfolioData.js';
 
+
 export default function Projects() {
   return (
     <section id="projects" className="section projects" aria-labelledby="projects-title">
