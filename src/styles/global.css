@@ -239,11 +239,11 @@ main {
 
 .hero {
   display: grid;
-  gap: clamp(2rem, 4vw, 3.5rem);
+  gap: clamp(1.75rem, 4vw, 3rem);
   align-items: center;
   width: min(1100px, 92vw);
-  margin: clamp(3rem, 8vw, 5rem) auto 0;
-  padding: clamp(3rem, 8vw, 4.5rem);
+  margin: clamp(2.5rem, 7vw, 4.5rem) auto 0;
+  padding: clamp(2.6rem, 7vw, 4rem);
   background: linear-gradient(135deg, rgba(91, 228, 168, 0.16), rgba(91, 228, 168, 0));
   border-radius: clamp(1.5rem, 5vw, 2.5rem);
   border: 1px solid var(--color-border);
@@ -264,12 +264,12 @@ main {
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(3rem, 8vw, 4.5rem);
+  font-size: clamp(2.25rem, 8vw, 4rem);
   letter-spacing: -0.04em;
 }
 
 .hero-headline {
-  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-size: clamp(1.1rem, 3.8vw, 1.55rem);
   font-weight: 500;
   color: var(--color-muted);
   min-height: 1.6em;
@@ -463,11 +463,13 @@ main {
 }
 
 .project-media {
+  position: relative;
   aspect-ratio: 16 / 9;
   background: linear-gradient(135deg, rgba(91, 228, 168, 0.22), rgba(91, 228, 168, 0));
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .project-media img {
@@ -479,6 +481,83 @@ main {
 .project-placeholder {
   color: var(--color-muted);
   font-weight: 500;
+}
+
+.project-carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.project-carousel-track img {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 240ms ease;
+}
+
+.project-carousel-track img.is-active {
+  opacity: 1;
+}
+
+.project-carousel .carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  border: none;
+  display: grid;
+  place-items: center;
+  background: rgba(4, 8, 15, 0.55);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.project-carousel .carousel-control:hover,
+.project-carousel .carousel-control:focus-visible {
+  background: rgba(4, 8, 15, 0.85);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.project-carousel .carousel-control.prev {
+  left: 1rem;
+}
+
+.project-carousel .carousel-control.next {
+  right: 1rem;
+}
+
+.project-carousel-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  padding: 0;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.carousel-dot.is-active {
+  background: var(--color-accent);
+  transform: scale(1.2);
+}
+
+.carousel-dot:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 .project-content {
@@ -776,8 +855,18 @@ main {
 }
 
 @media (max-width: 640px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .section {
+    width: min(1100px, 94vw);
+    padding: 3.25rem 0;
+  }
+
   .hero {
-    padding: 2.5rem;
+    padding: 2.15rem;
+    gap: 1.75rem;
   }
 
   .hero-actions {
@@ -789,11 +878,89 @@ main {
     justify-content: center;
   }
 
+  .hero-social {
+    flex-wrap: wrap;
+  }
+
+  .project-card {
+    gap: 1.25rem;
+  }
+
   .project-content {
-    padding: 0 1.5rem 1.5rem;
+    padding: 0 1.35rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.55rem;
+  }
+
+  .experience-card,
+  .skill-card,
+  .callout-card,
+  .contact-details,
+  .contact-form {
+    padding: 1.6rem;
   }
 
   .footer-content {
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.75rem;
+    border-radius: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-highlight {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    border-radius: 1.35rem;
+  }
+
+  .project-carousel .carousel-control {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+
+  .project-carousel .carousel-control.prev {
+    left: 0.75rem;
+  }
+
+  .project-carousel .carousel-control.next {
+    right: 0.75rem;
+  }
+
+  .project-carousel-dots {
+    bottom: 0.65rem;
+  }
+
+  .project-content {
+    padding: 0 1.1rem 1.35rem;
+  }
+
+  .experience-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .experience-period,
+  .experience-company {
+    font-size: 0.9rem;
   }
 }
